@@ -68,7 +68,7 @@ export default function HeroSection({ onStart }: { onStart: () => void }) {
             className="relative z-10 w-full md:max-w-3xl md:mx-auto scale-[0.85] sm:scale-100 origin-top mb-6 sm:mb-10 px-4 md:px-0"
           >
             {/* Tablet Frame */}
-            <div className="relative bg-gray-900 rounded-[2rem] sm:rounded-[3rem] p-3 sm:p-4 shadow-2xl shadow-gray-200/50 border border-gray-800 ring-1 ring-white/10 mx-2 sm:mx-0">
+            <div className="relative bg-gray-900 rounded-[2rem] sm:rounded-[3rem] p-3 sm:p-4 shadow-2xl shadow-gray-200/50 border border-white ring-1 ring-white/10 mx-2 sm:mx-0">
               {/* Screen Content */}
               <div className="relative rounded-[1.5rem] sm:rounded-[2.25rem] overflow-hidden bg-gray-50 aspect-[16/10] border border-gray-700/50 flex flex-col">
                 {/* Mock UI Header */}
@@ -95,7 +95,7 @@ export default function HeroSection({ onStart }: { onStart: () => void }) {
                     <div className="flex gap-4 h-32 sm:h-40 flex-wrap">
                       <div className="w-full flex-1 bg-white rounded-xl border border-gray-200 shadow-sm p-4 flex flex-col gap-2 overflow-hidden relative">
                          <div className="flex justify-between items-center mb-1">
-                            <div className="text-[10px] font-bold text-slate-800 uppercase">Material Cost</div>
+                            <div className="text-[10px] font-bold text-white uppercase">Material Cost</div>
                             <div className="h-4 w-12 bg-blue-100 rounded-full"></div>
                          </div>
                          {/* Material Cost Breakdown Bars */}
@@ -178,7 +178,7 @@ export default function HeroSection({ onStart }: { onStart: () => void }) {
                 <CheckCircle2 className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="leading-tight text-lg font-medium text-slate-800 mb-4">30+ Professional Tools</h4>
+                <h4 className="leading-tight text-lg font-medium text-white mb-4">30+ Professional Tools</h4>
                 <p className="text-base font-normal text-slate-600 leading-relaxed">Verified to global standards</p>
               </div>
             </div>
@@ -229,24 +229,24 @@ export default function HeroSection({ onStart }: { onStart: () => void }) {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="w-full md:max-w-4xl md:mx-auto mt-12 pt-8 border-t border-gray-200/60 px-4 md:px-0"
         >
-          <p className="mb-6 text-base font-normal text-slate-600 leading-relaxed">Trusted by global practitioners and firms</p>
+          <p className="mb-6 text-base font-medium text-slate-600 leading-relaxed">Trusted by global practitioners and firms</p>
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Placeholder Logos */}
             <div className="text-xl font-bold tracking-tighter text-slate-800 flex items-center gap-2">
-              <div className="w-6 h-6 rounded bg-gray-800"></div> BuildCorp
+              <div className="w-6 h-6 rounded bg-slate-800"></div> BuildCorp
             </div>
             <div className="text-xl font-black tracking-widest text-slate-800 flex items-center gap-1">
-              <div className="w-4 h-6 bg-gray-800 -skew-x-12"></div>
-              <div className="w-4 h-6 bg-gray-800 -skew-x-12"></div>
+              <div className="w-4 h-6 bg-slate-800 -skew-x-12"></div>
+              <div className="w-4 h-6 bg-slate-800 -skew-x-12"></div>
               NEXUS
             </div>
             <div className="text-xl font-bold font-serif italic text-slate-800 flex items-center gap-2">
               <div className="w-6 h-6 rounded-full border-4 border-gray-800"></div> Architechs
             </div>
             <div className="text-xl font-extrabold uppercase text-slate-800 flex items-center gap-1">
-              <div className="w-3 h-6 bg-gray-800"></div>
-              <div className="w-3 h-6 bg-gray-800"></div>
-              <div className="w-3 h-6 bg-gray-800"></div>
+              <div className="w-3 h-6 bg-slate-800"></div>
+              <div className="w-3 h-6 bg-slate-800"></div>
+              <div className="w-3 h-6 bg-slate-800"></div>
               STRUCT
             </div>
           </div>

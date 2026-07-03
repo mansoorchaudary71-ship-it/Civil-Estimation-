@@ -50,7 +50,7 @@ import SocialProofSection from "./SocialProofSection";
 import WorkspaceSection from "./WorkspaceSection";
 
 import { HowItWorksSection,
- FeatureComparisonSection,
+ FeatureComparisonSection, AICopilotSection,
 } from "./LandingSections";
 
 import { useSettings } from "../context/SettingsContext";
@@ -1143,7 +1143,8 @@ export default function Dashboard({
  <ScrollReveal><SocialProofSection /></ScrollReveal>
  <ScrollReveal yOffset={30}><HowItWorksSection /></ScrollReveal>
  <ScrollReveal yOffset={30}><FeatureComparisonSection /></ScrollReveal>
- <div className="w-full bg-slate-50/50 pb-0 pt-4 -mt-8 relative z-10  border-t border-slate-200/60 shadow-[0_-8px_30px_rgba(0,0,0,0.04)] overflow-visible">
+      <ScrollReveal yOffset={30}><AICopilotSection /></ScrollReveal>
+ <div className="w-full bg-white pb-0 pt-10 -mt-8 relative z-10 shadow-[0_-12px_30px_rgba(0,0,0,0.08)] overflow-visible rounded-t-[2rem]">
  {/* Premium Ambient Background */}
  <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]" 
  style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'24\' height=\'24\' viewBox=\'0 0 24 24\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'1.5\'/%3E%3C/g%3E%3C/svg%3E")' }} 
@@ -1174,10 +1175,10 @@ export default function Dashboard({
  const toolsInGroup = groupedModules[groupName];
  if (!toolsInGroup || toolsInGroup.length === 0) return null;
  return (
- <div key={groupName} className={`relative w-full flex flex-col py-12 md:py-20 border-t border-white/60 overflow-hidden ${index % 3 === 0 ? 'bg-[#F4F1EA]' : index % 3 === 1 ? 'bg-[#F0F5FF]' : 'bg-[#EFF6F1]'}`}>
+ <div key={groupName} className={"relative w-full flex flex-col py-16 md:py-24 border-t border-white/60 overflow-hidden " + (index % 3 === 0 ? 'bg-[#E6DFCD]' : index % 3 === 1 ? 'bg-[#D6E3F9]' : 'bg-[#D5E5DA]')}>
     {/* Subtle Technical Pattern (Texture) */}
     <div 
-      className="absolute inset-0 pointer-events-none opacity-[0.03]" 
+      className="absolute inset-0 pointer-events-none opacity-[0.03] invert-0" 
       style={{ 
         backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', 
         backgroundSize: '24px 24px' 
@@ -1185,10 +1186,10 @@ export default function Dashboard({
     ></div>
     
     {/* Ambient Radial Lighting (Depth) */}
-    <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-white/50 rounded-full blur-[100px] pointer-events-none -translate-y-1/2"></div>
+    <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-white/40 rounded-full blur-[100px] pointer-events-none -translate-y-1/2"></div>
     
     <div className="w-full md:max-w-[1400px] md:mx-auto px-4 flex flex-col gap-5 relative z-10">
-      <h2 className="px-2 flex items-center gap-2 text-xl font-semibold text-slate-800 tracking-tight mb-4">
+      <h2 className="px-2 flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight mb-6 text-slate-900">
  {groupName}
  <span className="text-sm font-normal px-2 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-500 shadow-sm">{toolsInGroup.length}</span>
  </h2>
@@ -1336,10 +1337,10 @@ export default function Dashboard({
  const toolsInGroup = groupedModules[groupName];
  if (!toolsInGroup || toolsInGroup.length === 0) return null;
  return (
- <div key={groupName} className={`relative w-full flex flex-col py-12 md:py-20 border-t border-white/60 overflow-hidden ${index % 3 === 0 ? 'bg-[#F4F1EA]' : index % 3 === 1 ? 'bg-[#F0F5FF]' : 'bg-[#EFF6F1]'}`}>
+ <div key={groupName} className={"relative w-full flex flex-col py-16 md:py-24 border-t border-white/60 overflow-hidden " + (index % 3 === 0 ? 'bg-[#E6DFCD]' : index % 3 === 1 ? 'bg-[#D6E3F9]' : 'bg-[#D5E5DA]')}>
     {/* Subtle Technical Pattern (Texture) */}
     <div 
-      className="absolute inset-0 pointer-events-none opacity-[0.03]" 
+      className="absolute inset-0 pointer-events-none opacity-[0.03] invert-0" 
       style={{ 
         backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', 
         backgroundSize: '24px 24px' 
@@ -1347,10 +1348,10 @@ export default function Dashboard({
     ></div>
     
     {/* Ambient Radial Lighting (Depth) */}
-    <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-white/50 rounded-full blur-[100px] pointer-events-none -translate-y-1/2"></div>
+    <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-white/40 rounded-full blur-[100px] pointer-events-none -translate-y-1/2"></div>
     
     <div className="w-full md:max-w-[1400px] md:mx-auto px-4 flex flex-col gap-5 relative z-10">
-      <h2 className="px-2 flex items-center gap-2 text-xl font-semibold text-slate-800 tracking-tight mb-4">
+      <h2 className="px-2 flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight mb-6 text-slate-900">
  {groupName}
  <span className="text-sm font-normal px-2 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-slate-500 shadow-sm">{toolsInGroup.length}</span>
  </h2>
