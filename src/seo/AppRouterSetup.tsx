@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import DynamicToolPage from './DynamicToolPage';
 // import Dashboard from '../components/Dashboard'; 
@@ -12,7 +12,7 @@ import DynamicToolPage from './DynamicToolPage';
 export default function AppRouterSetup() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <HashRouter>
         {/* Your Layout component would go here (Navbar, Sidebar, etc.) */}
         <Routes>
           {/* Home Route */}
@@ -25,7 +25,7 @@ export default function AppRouterSetup() {
           <Route path="/404" element={<div className="p-12 text-center text-2xl font-bold">Page Not Found</div>} />
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </HelmetProvider>
   );
 }
